@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="figuras.css">
+    <title>Caluclar Areas y Perimetros de las figuras geometricas</title>
+</head>
+<body>
+    <a href="../index.html" class="backToHome"> ← Regresar</a>
+    <h1>Comienza a calcular!</h1>
+    <section class="container">
+        <div>
+            <h3>Cuadrado</h3>
+            <form class="figuras cuadrado" action="">
+                <label for="cdrLado">
+                    Ingrese el lado:
+                    <input id="cdrLado" type="number">
+                </label>
+                <span id="showRespCdr"></span>
+                <div class="buttons">
+                    <button class="button primaryButtons" id="btnCdrPerimetro" type="button">Calcular Perimetro</button>
+                    <button class="button primaryButtons" id="btnCdrArea" type="button">Calcular Area</button>
+                    <button class="button primaryButtons" id="btnResetCdr" type="button">Limpiar</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>Triangulo</h3>
+            <form class="figuras triangulo" action="">
+                <label for="trgLado1">
+                    Ingrese el lado(1):
+                    <input id="trgLado1" type="number">
+                </label>
+                <label for="trgLado2">
+                    Ingrese el lado(2):
+                    <input id="trgLado2" type="number">
+                </label>
+                <label for="trgBase">
+                    Base:
+                    <input id="trgBase" type="number">
+                </label>
+                <label for="trgAltura">
+                    Altura:
+                    <input id="trgAltura" type="number">
+                </label>
+                <span id="showRespTrg"></span>
+                <div class="buttons">
+                    <button class="button secondaryButtons" id="btnTrgPerimetro" type="button">Calcular Perimetro</button>
+                    <button class="button secondaryButtons" id="btnTrgArea" type="button">Calcular Area</button>
+                    <button class="button secondaryButtons" id="btnResetTrg" type="button">Limpiar</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>Circulo</h3>
+            <form class="figuras circulo" action="">
+                <label for="crloRadio">
+                    Ingrese el radio:
+                    <input id="crloRadio" type="number">
+                </label>
+                <span id="showRespCrlo"></span>
+                <div class="buttons">
+                    <button class="button primaryButtons" id="btnCrloPerimetro" type="button">Calcular Perimetro</button>
+                    <button class="button primaryButtons" id="btnCrloArea" type="button">Calcular Area</button>
+                    <button class="button primaryButtons" id="btnResetCrlo" type="button">Limpiar</button>
+                </div>
+            </form>
+        </div>    
+    </section>
+
+    <footer>
+        <p>Creado con 💙 por <a href="https://github.com/Ronnal-Zp">Aldahir Z.</a></P>
+    </footer>
+
+    <script src="figuras.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(61, 59, 59);
+}
+
+.backToHome{
+    border-bottom: 3px solid black;
+    margin-bottom: 30px;
+   
+
+    position: relative;
+    left: calc(50% - 60px);
+    top: 8px;
+
+    text-decoration: none;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    color: darkolivegreen;
+}
+
+.container{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container h3{
+    text-align: center;
+    font-size: 2.4rem;
+    color: aliceblue;
+}
+
+.container div{
+    margin-top: 40px;
+}
+
+.figuras{
+    width: 320px;
+    height: 300px;
+    background-color: tomato;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: relative;
+
+    border-radius: 14px;
+    box-shadow: 2px 2px 1px black;
+}
+.cuadrado, .circulo{
+    justify-content: center;
+}
+.cuadrado button, .circulo button{
+    width: 80px;
+    padding: 4px 0 ;
+    margin-top: 20px;
+    display: inline-block;
+}
+.triangulo{
+    padding-top: 8px;
+}
+
+
+.container > div:nth-child(odd) > .figuras{
+    background-color: teal;
+}
+
+
+label{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 18px;
+    width: 190px;
+    padding: 0 4px;
+    border: none;
+    border-radius: 8px;
+}
+input:focus{
+    outline: none;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.triangulo .buttons  button:nth-of-type(3){
+    margin-top: 6px;
+}
+
+button{
+    border-radius: 8px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:active{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.primaryButtons{
+    background-color: rgb(38, 162, 162);
+    box-shadow: 1px 1px 2px black;
+}
+.secondaryButtons{
+    background-color: rgb(200, 86, 66);
+    box-shadow: 1px 1px 2px black;
+
+}
+
+
+
+#showRespCdr,
+#showRespCrlo,
+#showRespTrg
+{
+    position: absolute;
+    top: 110px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+#showRespTrg{
+    top: 206px;
+}
+
+
+footer{
+    width: 100%;
+    height: 30px;
+    border-bottom: 10px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #223671;
+}
+footer p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+footer a{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+    border-bottom: 1px solid black;
+} 

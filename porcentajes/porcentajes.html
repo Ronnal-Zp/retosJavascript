@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular porcentajes de productos</title>
+    <link rel="stylesheet" href="porcentajes.css">
+</head>
+<body>
+    <main class="main-container-porcentajes">
+        <a href="../index.html" class="backToHome"> ← Regresar</a>
+        <h1>¡Elije el descuento de tu producto!</h1>
+        <section class="container-porcentajes"> 
+            <form class="form" action="">
+                <label class="percentages-description" for="precio">Ingrese aqui el precio del prodcuto: </label>
+                <input type="number" id="precio">
+                <div class="container-percentages-selection">
+                    <label class="percentages-selection" for="desc">Elija su descuento:</label>
+                    <select id="listaDescuentos">
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                    </select>
+                </div>
+                <div class="percentages-buttons"> 
+                    <button type="button" id="calcular">Calcular</button>
+                    <button type="button" id="reset">Limpiar</button>
+                </div>
+                <p id="showPrice"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Creado con 💙 por <a href="https://github.com/Ronnal-Zp">Aldahir Z.</a></P>
+    </footer>
+    <script src="procentajes.js"></script>
+</body>
+</html>

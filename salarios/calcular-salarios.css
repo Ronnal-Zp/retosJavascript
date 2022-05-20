@@ -1,0 +1,136 @@
+:root{
+    --color1: #3A2E39;
+    --color2: #1E555C;
+    --color3: #F4D8CD;
+    --color4: #EDB183;
+    --color5: #F15152;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.backToHome{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    margin-bottom: 30px;
+}
+
+.mainEmployees{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color:  var(--color4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerDescription{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.containerDescription h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.containerDescription h2{
+    margin-bottom: 16px;
+
+    font-size: 1.4rem;
+    color: var(--color2);
+    font-style: italic;
+}
+.containerDescription p{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.containerEmployees{
+    width: 50%;
+    min-width: 300px;
+    padding: 14px 8px;
+    /* height: 200px; */
+
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+
+    border-radius: 16px;
+    background-color: var(--color3);
+}
+
+.containerEmployees p{
+    font-size: 1.1rem;
+}
+.bold{
+    font-weight: bold;
+}
+
+.containerResolve{
+    margin-top: 20px;
+}
+.containerResolve p{
+    margin-bottom: 8px;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    justify-content: space-around;
+}
+.button{
+    margin-bottom: 30px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color5);
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+    border-bottom: 10px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #223671;
+}
+footer p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+footer a{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+    border-bottom: 1px solid black;
+}
