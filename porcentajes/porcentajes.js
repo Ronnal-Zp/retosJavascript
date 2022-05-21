@@ -30,19 +30,30 @@ const inputPrecio = document.getElementById("precio")
 
 inputPrecio.addEventListener("keyup",(e)=>{
     if(valideKey(e)){}else{
-        inputPrecio.value = ""
-        alert("¡Ese numero no es valido!")
+        inputPrecio.value = "";
+        alert("¡Ese numero no es valido!");
+    }
+    if(e.key == "Enter"){
+      e.preventDefault();
+      if(inputPrecio.value = ""){
+        alert("¡No ingresaste un numero!")
+      }
     }
 })
 
 
 button.addEventListener("click", ()=>{
 
-    let precio      = Number(document.getElementById("precio").value);
-    let listaDesc   = Number(document.getElementById("listaDescuentos").value);
+    if(inputPrecio.value == ""){
+        inputPrecio.value = "";
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
-    console.log(listaDesc);
+    let precio = Number(document.getElementById("precio").value);
+    let listaDesc = Number(document.getElementById("listaDescuentos").value);
 
+  
     let showPrice = document.getElementById("showPrice");
 
     showPrice.innerText = calcularDescuento(precio, listaDesc);

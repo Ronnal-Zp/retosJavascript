@@ -1,38 +1,3 @@
-/*function calcularCuadrado(lado){
-    console.log(`El lado de su cuadrado mide: ${lado}cm`);
-    console.log(`El perimetro de su cuadrado mide: ${lado*4}cm`);
-    console.log(`El area de su cuadrado mide: ${lado*lado}cm^2`);
-}
-
-function calcularTriangulo(lado1, lado2, base, altura){
-    console.log(`Los lados de su triangulo miden: ${lado1}cm, ${lado2}cm, ${base}cm. Y su altura mide ${altura}cm`);
-
-    console.log(`El perimetro de su triangulo mide: ${lado1+lado2+base}cm^2`);
-    console.log(`El area de su triangulo es de: ${(base*altura)/2}cm`);
-}
-
-function calcularCirculo(radio){
-    const diametro = radio * 2;
-
-    console.log(`El radio de su circulo mide: ${radio}cm. Y su diametro mide: ${diametro}cm`);
-    console.log(`La circunsferencia de su circulo mide: ${(diametro * Math.PI).toFixed(2)}`);
-    console.log(`El area de su circulo mide: ${((radio * radio) * Math.PI).toFixed(2)}`);
-}
-
-console.group("Cuadrados");
-calcularCuadrado(5);
-console.groupEnd();
-
-console.group("Triangulo");
-calcularTriangulo(6, 6, 4, 5.5);
-console.groupEnd();
-
-console.group("Circle")
-calcularCirculo(5);
-console.groupEnd();
-*/
-
-
 function perimetroCuadrado(lado){
 
     return lado*4;
@@ -85,12 +50,20 @@ const btnResetCrlo = document.getElementById("btnResetCrlo");
 
 btnCdrPerimetro.addEventListener("click", ()=>{
     let cdrLado = Number(document.getElementById("cdrLado").value);
-  
+    if(cdrLado == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
+
     const show = document.getElementById("showRespCdr");
     show.innerText = `El perimetro de su cuadrado es: ${perimetroCuadrado(cdrLado)} cm^2`
 })
 btnCdrArea.addEventListener("click", ()=>{
     let cdrLado = Number(document.getElementById("cdrLado").value);
+    if(cdrLado == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
     const show = document.getElementById("showRespCdr");
     show.innerText = `El area de su cuadrado es: ${areaCuadrado(cdrLado)} cm`
@@ -101,12 +74,20 @@ btnCdrArea.addEventListener("click", ()=>{
 
 btnCrloPerimetro.addEventListener("click", ()=>{
     let crloRadio = Number(document.getElementById("crloRadio").value);
+    if(crloRadio == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
     const show = document.getElementById("showRespCrlo");
     show.innerText = `La circunsferencia de su circulo mide: ${perimetroCirculo(crloRadio)} cm^2`;
 })
 btnCrloArea.addEventListener("click", ()=>{
     let crloRadio = Number(document.getElementById("crloRadio").value);
+    if(crloRadio == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
     const show = document.getElementById("showRespCrlo");
     show.innerText = `El area de su circulo mide: ${areaCirculo(crloRadio)} cm`;
@@ -118,6 +99,10 @@ btnTrgPerimetro.addEventListener("click", ()=>{
     let trgLado1 = Number(document.getElementById("trgLado1").value);
     let trgLado2 = Number(document.getElementById("trgLado2").value);
     let trgBase = Number(document.getElementById("trgBase").value);
+    if(trgLado1 == 0 || trgLado2 == 0 || trgBase == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
     if(trgLado1 != trgLado2){
         alert("Los lado no son iguales!")
@@ -132,6 +117,10 @@ btnTrgPerimetro.addEventListener("click", ()=>{
 btnTrgArea.addEventListener("click", ()=>{
     let trgBase = Number(document.getElementById("trgBase").value);
     let trgAltura = Number(document.getElementById("trgAltura").value);
+    if(trgAltura == 0){
+        alert("¡No ingresaste un numero!");
+        return;
+    }
 
     const show = document.getElementById("showRespTrg");
     show.innerText = `El area de su triangulo mide: ${areaTriangulo(trgBase, trgAltura)} cm`
@@ -159,7 +148,7 @@ btnResetTrg.addEventListener("click", ()=>{
 
 
 
-/*VALIDACIONES DE NUMEROS */
+/*VALIDACIONES DE NUMEROS ENTEROS*/
 const inputCdrLado = document.getElementById("cdrLado");
 inputCdrLado.addEventListener("keyup", (e)=>{
     if(valideKey(e)){}else{

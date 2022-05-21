@@ -16,9 +16,9 @@ const moda = (arr)=>{
         objNumerosRepetidos[elem] ? objNumerosRepetidos[elem] += 1 : objNumerosRepetidos[elem] = 1;
     })
 
-
-    const arrNumerosRepetidos = Object.entries(objNumerosRepetidos).sort((a, b) => b[1] - a[1])
     /*Genera un array con varios arrays, ordena los arrays de dentro en base a los elementos de la posicion [1] */
+    const arrNumerosRepetidos = Object.entries(objNumerosRepetidos).sort((a, b) => b[1] - a[1])
+    
     
     const valorMasRepetido = arrNumerosRepetidos[0][0];
     const numeroVecesRepetido = arrNumerosRepetidos[0][1];
@@ -41,10 +41,22 @@ const mediana = (arr)=>{
     }else{
         return arrOrdenado[arrHalf]
     }
-
-   
 }
 
+
+function valideKey(evt){
+			
+    // code is the decimal ASCII representation of the pressed key.
+    var code = (evt.which) ? evt.which : evt.keyCode;
+    
+    if(code==8) { // backspace.
+      return true;
+    } else if(code>=48 && code<=57) { // is a number.
+      return true;
+    } else{ // other keys.
+      return false;
+    }
+}
 
 const btnIngreso = document.getElementById("btnIngresar");
 const btnReiniciar = document.getElementById("btnReiniciar");
@@ -55,10 +67,23 @@ const inputVariosNumeros = document.getElementById("inputVariosNumeros");
 const showInfo = document.getElementById("showInfo");
 let arrNumerosIngresados = [];
 
+
+inputVariosNumeros.addEventListener("keyup", (e)=>{
+    if(valideKey(e)){}else{
+        inputVariosNumeros.value = "";
+        alert("¡Ese numero no es valido!");
+    }
+})
+
+
 btnIngreso.addEventListener("click", ()=>{
-    arrNumerosIngresados.push(parseInt(inputVariosNumeros.value))
-    inputVariosNumeros.value = "";
-    console.log(arrNumerosIngresados);
+    if(inputVariosNumeros.value == ""){
+        alert("¡No has entrado un numero!");
+    }else{
+        arrNumerosIngresados.push(parseInt(inputVariosNumeros.value))
+        inputVariosNumeros.value = "";
+        console.log(arrNumerosIngresados);
+    }
 })
 
 inputVariosNumeros.addEventListener("keydown", (e)=>{

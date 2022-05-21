@@ -17,10 +17,10 @@ html{
 
 .backToHome{
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid whitesmoke;
     margin-bottom: 30px;
 }
 
@@ -39,11 +39,13 @@ html{
     
 }
 
-h1{
-    font-size: 3rem;
-    color: whitesmoke;
-    text-shadow: 1px 1px 2px black;
+.main-container-porcentajes h1{
     padding: 10px 0 20px;
+
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    color: whitesmoke;
 }
 
 .percentages-description{
@@ -55,7 +57,8 @@ h1{
 }
 
 .form{  
-    height: 260px;
+    height: auto;
+    width: 300px;
     padding: 12px 8px;
     border-radius: 12px;
 
@@ -64,6 +67,11 @@ h1{
     align-items: center;
     background-color: var(--primary);
     box-shadow: 1px 1px 2px black;
+}
+
+.form input{
+    align-self: flex-end;
+    margin-right: 30px;
 }
 
 .container-percentages-selection{
